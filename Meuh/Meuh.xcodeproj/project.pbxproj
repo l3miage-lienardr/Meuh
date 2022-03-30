@@ -7,32 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F6A01D7A27F460CC005B543C /* MeuhApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A01D6A27F460CB005B543C /* MeuhApp.swift */; };
-		F6A01D7B27F460CC005B543C /* MeuhApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A01D6A27F460CB005B543C /* MeuhApp.swift */; };
-		F6A01D7C27F460CC005B543C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A01D6B27F460CB005B543C /* ContentView.swift */; };
-		F6A01D7D27F460CC005B543C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A01D6B27F460CB005B543C /* ContentView.swift */; };
-		F6A01D7E27F460CC005B543C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A01D6C27F460CC005B543C /* Assets.xcassets */; };
-		F6A01D7F27F460CC005B543C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6A01D6C27F460CC005B543C /* Assets.xcassets */; };
+		31608CB927F46E3200F4039D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31608CB827F46E3200F4039D /* AppDelegate.swift */; };
+		31608CBB27F46E3200F4039D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31608CBA27F46E3200F4039D /* SceneDelegate.swift */; };
+		31608CBD27F46E3200F4039D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31608CBC27F46E3200F4039D /* ViewController.swift */; };
+		31608CC027F46E3200F4039D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31608CBE27F46E3200F4039D /* Main.storyboard */; };
+		31608CC227F46E3300F4039D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31608CC127F46E3300F4039D /* Assets.xcassets */; };
+		31608CC527F46E3300F4039D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31608CC327F46E3300F4039D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F6A01D6A27F460CB005B543C /* MeuhApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeuhApp.swift; sourceTree = "<group>"; };
-		F6A01D6B27F460CB005B543C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		F6A01D6C27F460CC005B543C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F6A01D7127F460CC005B543C /* Meuh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meuh.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6A01D7727F460CC005B543C /* Meuh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meuh.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6A01D7927F460CC005B543C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		31608CB527F46E3200F4039D /* Meuh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meuh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31608CB827F46E3200F4039D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		31608CBA27F46E3200F4039D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		31608CBC27F46E3200F4039D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		31608CBF27F46E3200F4039D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31608CC127F46E3300F4039D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31608CC427F46E3300F4039D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		31608CC627F46E3300F4039D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F6A01D6E27F460CC005B543C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F6A01D7427F460CC005B543C /* Frameworks */ = {
+		31608CB227F46E3200F4039D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,98 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F6A01D6427F460CB005B543C = {
+		31608CAC27F46E3200F4039D = {
 			isa = PBXGroup;
 			children = (
-				F6A01D6927F460CB005B543C /* Shared */,
-				F6A01D7827F460CC005B543C /* macOS */,
-				F6A01D7227F460CC005B543C /* Products */,
+				31608CB727F46E3200F4039D /* Meuh */,
+				31608CB627F46E3200F4039D /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F6A01D6927F460CB005B543C /* Shared */ = {
+		31608CB627F46E3200F4039D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6A01D6A27F460CB005B543C /* MeuhApp.swift */,
-				F6A01D6B27F460CB005B543C /* ContentView.swift */,
-				F6A01D6C27F460CC005B543C /* Assets.xcassets */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		F6A01D7227F460CC005B543C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F6A01D7127F460CC005B543C /* Meuh.app */,
-				F6A01D7727F460CC005B543C /* Meuh.app */,
+				31608CB527F46E3200F4039D /* Meuh.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F6A01D7827F460CC005B543C /* macOS */ = {
+		31608CB727F46E3200F4039D /* Meuh */ = {
 			isa = PBXGroup;
 			children = (
-				F6A01D7927F460CC005B543C /* macOS.entitlements */,
+				31608CB827F46E3200F4039D /* AppDelegate.swift */,
+				31608CBA27F46E3200F4039D /* SceneDelegate.swift */,
+				31608CBC27F46E3200F4039D /* ViewController.swift */,
+				31608CBE27F46E3200F4039D /* Main.storyboard */,
+				31608CC127F46E3300F4039D /* Assets.xcassets */,
+				31608CC327F46E3300F4039D /* LaunchScreen.storyboard */,
+				31608CC627F46E3300F4039D /* Info.plist */,
 			);
-			path = macOS;
+			path = Meuh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F6A01D7027F460CC005B543C /* Meuh (iOS) */ = {
+		31608CB427F46E3200F4039D /* Meuh */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6A01D8227F460CC005B543C /* Build configuration list for PBXNativeTarget "Meuh (iOS)" */;
+			buildConfigurationList = 31608CC927F46E3300F4039D /* Build configuration list for PBXNativeTarget "Meuh" */;
 			buildPhases = (
-				F6A01D6D27F460CC005B543C /* Sources */,
-				F6A01D6E27F460CC005B543C /* Frameworks */,
-				F6A01D6F27F460CC005B543C /* Resources */,
+				31608CB127F46E3200F4039D /* Sources */,
+				31608CB227F46E3200F4039D /* Frameworks */,
+				31608CB327F46E3200F4039D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Meuh (iOS)";
-			productName = "Meuh (iOS)";
-			productReference = F6A01D7127F460CC005B543C /* Meuh.app */;
-			productType = "com.apple.product-type.application";
-		};
-		F6A01D7627F460CC005B543C /* Meuh (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F6A01D8527F460CC005B543C /* Build configuration list for PBXNativeTarget "Meuh (macOS)" */;
-			buildPhases = (
-				F6A01D7327F460CC005B543C /* Sources */,
-				F6A01D7427F460CC005B543C /* Frameworks */,
-				F6A01D7527F460CC005B543C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Meuh (macOS)";
-			productName = "Meuh (macOS)";
-			productReference = F6A01D7727F460CC005B543C /* Meuh.app */;
+			name = Meuh;
+			productName = Meuh;
+			productReference = 31608CB527F46E3200F4039D /* Meuh.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F6A01D6527F460CB005B543C /* Project object */ = {
+		31608CAD27F46E3200F4039D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					F6A01D7027F460CC005B543C = {
-						CreatedOnToolsVersion = 13.1;
-					};
-					F6A01D7627F460CC005B543C = {
-						CreatedOnToolsVersion = 13.1;
+					31608CB427F46E3200F4039D = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = F6A01D6827F460CB005B543C /* Build configuration list for PBXProject "Meuh" */;
+			buildConfigurationList = 31608CB027F46E3200F4039D /* Build configuration list for PBXProject "Meuh" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -141,59 +110,63 @@
 				en,
 				Base,
 			);
-			mainGroup = F6A01D6427F460CB005B543C;
-			productRefGroup = F6A01D7227F460CC005B543C /* Products */;
+			mainGroup = 31608CAC27F46E3200F4039D;
+			productRefGroup = 31608CB627F46E3200F4039D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F6A01D7027F460CC005B543C /* Meuh (iOS) */,
-				F6A01D7627F460CC005B543C /* Meuh (macOS) */,
+				31608CB427F46E3200F4039D /* Meuh */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F6A01D6F27F460CC005B543C /* Resources */ = {
+		31608CB327F46E3200F4039D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A01D7E27F460CC005B543C /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F6A01D7527F460CC005B543C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F6A01D7F27F460CC005B543C /* Assets.xcassets in Resources */,
+				31608CC527F46E3300F4039D /* LaunchScreen.storyboard in Resources */,
+				31608CC227F46E3300F4039D /* Assets.xcassets in Resources */,
+				31608CC027F46E3200F4039D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F6A01D6D27F460CC005B543C /* Sources */ = {
+		31608CB127F46E3200F4039D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A01D7C27F460CC005B543C /* ContentView.swift in Sources */,
-				F6A01D7A27F460CC005B543C /* MeuhApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F6A01D7327F460CC005B543C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F6A01D7D27F460CC005B543C /* ContentView.swift in Sources */,
-				F6A01D7B27F460CC005B543C /* MeuhApp.swift in Sources */,
+				31608CBD27F46E3200F4039D /* ViewController.swift in Sources */,
+				31608CB927F46E3200F4039D /* AppDelegate.swift in Sources */,
+				31608CBB27F46E3200F4039D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		31608CBE27F46E3200F4039D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31608CBF27F46E3200F4039D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		31608CC327F46E3300F4039D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31608CC427F46E3300F4039D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		F6A01D8027F460CC005B543C /* Debug */ = {
+		31608CC727F46E3300F4039D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,15 +217,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		F6A01D8127F460CC005B543C /* Release */ = {
+		31608CC827F46E3300F4039D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,155 +272,92 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-			};
-			name = Release;
-		};
-		F6A01D8327F460CC005B543C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lienardduriez.Meuh;
-				PRODUCT_NAME = Meuh;
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F6A01D8427F460CC005B543C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lienardduriez.Meuh;
-				PRODUCT_NAME = Meuh;
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		F6A01D8627F460CC005B543C /* Debug */ = {
+		31608CCA27F46E3300F4039D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = Meuh/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lienardduriez.Meuh;
-				PRODUCT_NAME = Meuh;
-				SDKROOT = macosx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meuh.Meuh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F6A01D8727F460CC005B543C /* Release */ = {
+		31608CCB27F46E3300F4039D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = Meuh/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lienardduriez.Meuh;
-				PRODUCT_NAME = Meuh;
-				SDKROOT = macosx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meuh.Meuh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F6A01D6827F460CB005B543C /* Build configuration list for PBXProject "Meuh" */ = {
+		31608CB027F46E3200F4039D /* Build configuration list for PBXProject "Meuh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6A01D8027F460CC005B543C /* Debug */,
-				F6A01D8127F460CC005B543C /* Release */,
+				31608CC727F46E3300F4039D /* Debug */,
+				31608CC827F46E3300F4039D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6A01D8227F460CC005B543C /* Build configuration list for PBXNativeTarget "Meuh (iOS)" */ = {
+		31608CC927F46E3300F4039D /* Build configuration list for PBXNativeTarget "Meuh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6A01D8327F460CC005B543C /* Debug */,
-				F6A01D8427F460CC005B543C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F6A01D8527F460CC005B543C /* Build configuration list for PBXNativeTarget "Meuh (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F6A01D8627F460CC005B543C /* Debug */,
-				F6A01D8727F460CC005B543C /* Release */,
+				31608CCA27F46E3300F4039D /* Debug */,
+				31608CCB27F46E3300F4039D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F6A01D6527F460CB005B543C /* Project object */;
+	rootObject = 31608CAD27F46E3200F4039D /* Project object */;
 }
