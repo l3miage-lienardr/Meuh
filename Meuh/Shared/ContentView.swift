@@ -6,16 +6,36 @@
 //
 
 import SwiftUI
-
-struct ContentView: View {
-    var body: some View {
-        Text("Hello, world!")
-            .padding()
+import UIKit
+class ViewController: UIViewController {
+    var textView:UITextView?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+ 
+        determineMyDeviceOrientation()
     }
+    
+    func determineMyDeviceOrientation()
+    {
+        if UIDevice.current.orientation.isLandscape {
+            print("Device is in landscape mode")
+        } else {
+            print("Device is in portrait mode")
+        }
+    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        determineMyDeviceOrientation()
+    }
+ 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+ 
 }
