@@ -13,6 +13,7 @@
 		31608CE027F4709D00F4039D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31608CDE27F4709D00F4039D /* Main.storyboard */; };
 		31608CE227F4709E00F4039D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31608CE127F4709E00F4039D /* Assets.xcassets */; };
 		31608CE527F4709E00F4039D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31608CE327F4709E00F4039D /* LaunchScreen.storyboard */; };
+		31D4E1FC27FB2C4300760B17 /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D4E1FB27FB2C4300760B17 /* BoxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		31608CE127F4709E00F4039D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31608CE427F4709E00F4039D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31608CE627F4709E00F4039D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31D4E1FB27FB2C4300760B17 /* BoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				31608CD827F4709D00F4039D /* AppDelegate.swift */,
 				31608CDA27F4709D00F4039D /* SceneDelegate.swift */,
 				31608CDC27F4709D00F4039D /* ViewController.swift */,
+				31D4E1FB27FB2C4300760B17 /* BoxViewController.swift */,
 				31608CDE27F4709D00F4039D /* Main.storyboard */,
 				31608CE127F4709E00F4039D /* Assets.xcassets */,
 				31608CE327F4709E00F4039D /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				31608CDD27F4709D00F4039D /* ViewController.swift in Sources */,
 				31608CD927F4709D00F4039D /* AppDelegate.swift in Sources */,
+				31D4E1FC27FB2C4300760B17 /* BoxViewController.swift in Sources */,
 				31608CDB27F4709D00F4039D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
