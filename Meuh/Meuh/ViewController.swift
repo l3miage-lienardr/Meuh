@@ -10,31 +10,32 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var listTableView: UITableView!
-    var pictures = [String]()
-
+    var pictures = [UIImage?]()
+    var boxes = [Box]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fm = FileManager.default
-        let path = fm.currentDirectoryPath
-        let items = try! fm.contentsOfDirectory(atPath: path)
-
-        for item in items {
-            pictures.append(item)
-        }
-        print(path)
-        print(pictures)
-       
+        
+        
+        let box = Box(title: "Meuh", imageName: "boite-a-meuh-publicitaire")
+        let box2 = Box(title: "Corentin", imageName: "Corentin")
+        let box3 = Box(title: "Nicolas", imageName: "Nicolas")
+        
+        boxes.append(box)
+        boxes.append(box2)
+        boxes.append(box3)
+        
         listTableView.delegate = self
         listTableView.dataSource = self
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return boxes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = listTableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath)
+        let cell = listTableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! BoxCell
+        cell.titleLabel.text = boxes[indexPath.row].title
         return cell
     }
     
@@ -42,7 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let storyboad = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyboad.instantiateViewController(withIdentifier: "box") as! BoxViewController
         nextViewController.paramToReceive = "Le type de box"
-        nextViewController.selectedImage = pictures[indexPath.row]
+        nextViewController.selectedImage = UIImage(named: boxes[indexPath.row].imageName)
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 

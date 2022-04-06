@@ -11,12 +11,12 @@ class BoxViewController: UIViewController {
 
     var paramToReceive: String?
     @IBOutlet var imageView : UIImageView!
-    var selectedImage: String?
+    var selectedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let imageToLoad = selectedImage {
-            imageView.image  = UIImage(named: imageToLoad)
+            imageView.image  = imageToLoad
         }
         
         // Do any additional setup after loading the view.

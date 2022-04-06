@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3103D5F527FDA08D00DA1655 /* BoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103D5F427FDA08D00DA1655 /* BoxCell.swift */; };
+		3103D5F727FDA45500DA1655 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103D5F627FDA45500DA1655 /* Box.swift */; };
 		31608CD927F4709D00F4039D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31608CD827F4709D00F4039D /* AppDelegate.swift */; };
 		31608CDB27F4709D00F4039D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31608CDA27F4709D00F4039D /* SceneDelegate.swift */; };
 		31608CDD27F4709D00F4039D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31608CDC27F4709D00F4039D /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3103D5F427FDA08D00DA1655 /* BoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxCell.swift; sourceTree = "<group>"; };
+		3103D5F627FDA45500DA1655 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		31608CD527F4709D00F4039D /* Meuh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meuh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31608CD827F4709D00F4039D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31608CDA27F4709D00F4039D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,10 +66,12 @@
 				31608CDA27F4709D00F4039D /* SceneDelegate.swift */,
 				31608CDC27F4709D00F4039D /* ViewController.swift */,
 				31D4E1FB27FB2C4300760B17 /* BoxViewController.swift */,
+				3103D5F427FDA08D00DA1655 /* BoxCell.swift */,
 				31608CDE27F4709D00F4039D /* Main.storyboard */,
 				31608CE127F4709E00F4039D /* Assets.xcassets */,
 				31608CE327F4709E00F4039D /* LaunchScreen.storyboard */,
 				31608CE627F4709E00F4039D /* Info.plist */,
+				3103D5F627FDA45500DA1655 /* Box.swift */,
 			);
 			path = Meuh;
 			sourceTree = "<group>";
@@ -144,7 +150,9 @@
 				31608CDD27F4709D00F4039D /* ViewController.swift in Sources */,
 				31608CD927F4709D00F4039D /* AppDelegate.swift in Sources */,
 				31D4E1FC27FB2C4300760B17 /* BoxViewController.swift in Sources */,
+				3103D5F727FDA45500DA1655 /* Box.swift in Sources */,
 				31608CDB27F4709D00F4039D /* SceneDelegate.swift in Sources */,
+				3103D5F527FDA08D00DA1655 /* BoxCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
