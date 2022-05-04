@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
+class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     var player: AVAudioPlayer?
     var currentDeviceOrientation: UIDeviceOrientation = .unknown
@@ -16,63 +16,71 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     @IBOutlet var recordingTimeLabel: UILabel!
     @IBOutlet var record_btn_ref: UIButton!
     @IBOutlet var play_btn_ref: UIButton!
-
+    
     var audioRecorder: AVAudioRecorder!
     var audioPlayer : AVAudioPlayer!
     var meterTimer:Timer!
     var isAudioRecordingGranted: Bool!
     var isRecording = false
     var isPlaying = false
-     
+    
+    var pictures = [UIImage?]()
+    var boxes = [Box]()
+    
+    @IBOutlet weak var listTableView: UITableView!
+    
     override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-     
+        super.viewWillAppear(animated)
+        
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         NotificationCenter.default.addObserver(self, selector: #selector(self.deviceDidRotate(notification:)), name: UIDevice.orientationDidChangeNotification, object: nil)
-     
-            // Initial device orientation
+        
+        // Initial device orientation
         self.currentDeviceOrientation = UIDevice.current.orientation
-            // Do what you want here
-        }
-     
+        // Do what you want here
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
-            super.viewWillDisappear(animated)
-     
+        super.viewWillDisappear(animated)
+        
         NotificationCenter.default.removeObserver(self)
         if UIDevice.current.isGeneratingDeviceOrientationNotifications {
             UIDevice.current.endGeneratingDeviceOrientationNotifications()
-            }
         }
-     
+    }
+    
     @objc func deviceDidRotate(notification: NSNotification) {
-            self.currentDeviceOrientation = UIDevice.current.orientation
+        self.currentDeviceOrientation = UIDevice.current.orientation
         print(UIDevice.current.orientation.rawValue)
-            playSound(sound: "cow", type: "mp3")
-            // Do what you want here
-        }
+        playSound(sound: "cow", type: "mp3")
+        // Do what you want here
+    }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return.portrait
     }
     
-    
-    
-
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var listTableView: UITableView!
-    var pictures = [UIImage?]()
-    var boxes = [Box]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         check_record_permission()
+        
+        let box = Box(title: "Meuh", imageName: "boite-a-meuh-publicitaire")
+        let box2 = Box(title: "Corentin", imageName: "Corentin")
+        let box3 = Box(title: "Nicolas", imageName: "Nicolas")
+        
+        boxes.append(box)
+        boxes.append(box2)
+        boxes.append(box3)
+        
+        listTableView.delegate = self
+        listTableView.dataSource = self
     }
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         playSound(sound: "cow", type: "mp3")
-            
+        
     }
+    
     func playSound(sound :String, type : String) {
         if let path = Bundle.main.path(forResource: sound, ofType: type) {
             do {
@@ -85,8 +93,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    func check_record_permission()
-    {
+    func check_record_permission() {
         switch AVAudioSession.sharedInstance().recordPermission {
         case AVAudioSession.RecordPermission.granted:
             isAudioRecordingGranted = true
@@ -96,11 +103,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             break
         case AVAudioSession.RecordPermission.undetermined:
             AVAudioSession.sharedInstance().requestRecordPermission({ (allowed) in
-                    if allowed {
-                        self.isAudioRecordingGranted = true
-                    } else {
-                        self.isAudioRecordingGranted = false
-                    }
+                if allowed {
+                    self.isAudioRecordingGranted = true
+                } else {
+                    self.isAudioRecordingGranted = false
+                }
             })
             break
         default:
@@ -114,12 +121,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let documentsDirectory = paths[0]
         return documentsDirectory
     }
-
+    
     func getFileUrl() -> URL
     {
         let filename = "myRecording.m4a"
         let filePath = getDocumentsDirectory().appendingPathComponent(filename)
-    return filePath
+        return filePath
     }
     
     func setup_recorder()
@@ -164,7 +171,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         else
         {
             setup_recorder()
-
+            
             audioRecorder.record()
             meterTimer = Timer.scheduledTimer(timeInterval: 0.1, target:self, selector:#selector(self.updateAudioMeter(timer:)), userInfo:nil, repeats:true)
             record_btn_ref.setTitle("Stop", for: .normal)
@@ -172,7 +179,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             isRecording = true
         }
     }
-
+    
     @objc func updateAudioMeter(timer: Timer)
     {
         if audioRecorder.isRecording
@@ -210,7 +217,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         play_btn_ref.isEnabled = true
     }
-
+    
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool)
     {
         record_btn_ref.isEnabled = true
@@ -220,26 +227,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         let ac = UIAlertController(title: msg_title, message: msg_desc, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: action_title, style: .default)
-        {
+                     {
             (result : UIAlertAction) -> Void in
-        _ = self.navigationController?.popViewController(animated: true)
+            _ = self.navigationController?.popViewController(animated: true)
         })
         present(ac, animated: true)
     }
-        
-        
-        let box = Box(title: "Meuh", imageName: "boite-a-meuh-publicitaire")
-        let box2 = Box(title: "Corentin", imageName: "Corentin")
-        let box3 = Box(title: "Nicolas", imageName: "Nicolas")
-        
-        boxes.append(box)
-        boxes.append(box2)
-        boxes.append(box3)
-        
-        listTableView.delegate = self
-        listTableView.dataSource = self
-    }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return boxes.count
     }
@@ -257,6 +251,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         nextViewController.selectedImage = UIImage(named: boxes[indexPath.row].imageName)
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
-
+    
 }
 
