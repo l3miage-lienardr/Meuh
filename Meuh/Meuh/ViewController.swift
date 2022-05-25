@@ -10,15 +10,12 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    var player: AVAudioPlayer?
-    var currentDeviceOrientation: UIDeviceOrientation = .unknown
     
     @IBOutlet var recordingTimeLabel: UILabel!
     @IBOutlet var record_btn_ref: UIButton!
     @IBOutlet var play_btn_ref: UIButton!
     
     var audioRecorder: AVAudioRecorder!
-    var audioPlayer : AVAudioPlayer!
     var meterTimer:Timer!
     var isAudioRecordingGranted: Bool!
     var isRecording = false
@@ -29,32 +26,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     
     @IBOutlet weak var listTableView: UITableView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.deviceDidRotate(notification:)), name: UIDevice.orientationDidChangeNotification, object: nil)
-        
-        // Initial device orientation
-        self.currentDeviceOrientation = UIDevice.current.orientation
-        // Do what you want here
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        NotificationCenter.default.removeObserver(self)
-        if UIDevice.current.isGeneratingDeviceOrientationNotifications {
-            UIDevice.current.endGeneratingDeviceOrientationNotifications()
-        }
-    }
-    
-    @objc func deviceDidRotate(notification: NSNotification) {
-        self.currentDeviceOrientation = UIDevice.current.orientation
-        print(UIDevice.current.orientation.rawValue)
-        playSound(sound: "cow", type: "mp3")
-        // Do what you want here
-    }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return.portrait
@@ -64,9 +35,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         super.viewDidLoad()
         check_record_permission()
         
-        let box = Box(title: "Meuh", imageName: "boite-a-meuh-publicitaire")
-        let box2 = Box(title: "Corentin", imageName: "Corentin")
-        let box3 = Box(title: "Nicolas", imageName: "Nicolas")
+        let box = Box(title: "Meuh", imageName: "boite-a-meuh-publicitaire", sound: "cow")
+        let box2 = Box(title: "Corentin", imageName: "Corentin", sound:"cow")
+        let box3 = Box(title: "Nicolas", imageName: "Nicolas", sound:"cow")
         
         boxes.append(box)
         boxes.append(box2)
@@ -74,22 +45,6 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         
         listTableView.delegate = self
         listTableView.dataSource = self
-    }
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        playSound(sound: "cow", type: "mp3")
-        
-    }
-    
-    func playSound(sound :String, type : String) {
-        if let path = Bundle.main.path(forResource: sound, ofType: type) {
-            do {
-                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-                player?.play()
-            } catch {
-                print("Could not play the sound file" + sound)
-            }
-        }
     }
     
     
@@ -247,8 +202,8 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboad = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyboad.instantiateViewController(withIdentifier: "box") as! BoxViewController
-        nextViewController.paramToReceive = "Le type de box"
         nextViewController.selectedImage = UIImage(named: boxes[indexPath.row].imageName)
+        nextViewController.selectedSound=boxes[indexPath.row].sound
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
