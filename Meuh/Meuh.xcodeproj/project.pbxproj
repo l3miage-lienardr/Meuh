@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3103D5F527FDA08D00DA1655 /* BoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103D5F427FDA08D00DA1655 /* BoxCell.swift */; };
 		3103D5F727FDA45500DA1655 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103D5F627FDA45500DA1655 /* Box.swift */; };
+		31486C7D284770DB002D593F /* RecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31486C7C284770DB002D593F /* RecordController.swift */; };
 		31608CD927F4709D00F4039D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31608CD827F4709D00F4039D /* AppDelegate.swift */; };
 		31608CDB27F4709D00F4039D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31608CDA27F4709D00F4039D /* SceneDelegate.swift */; };
 		31608CDD27F4709D00F4039D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31608CDC27F4709D00F4039D /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		3103D5F427FDA08D00DA1655 /* BoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxCell.swift; sourceTree = "<group>"; };
 		3103D5F627FDA45500DA1655 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		31486C7C284770DB002D593F /* RecordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordController.swift; sourceTree = "<group>"; };
 		31608CD527F4709D00F4039D /* Meuh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meuh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31608CD827F4709D00F4039D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31608CDA27F4709D00F4039D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		31608CD727F4709D00F4039D /* Meuh */ = {
 			isa = PBXGroup;
 			children = (
+				31486C7C284770DB002D593F /* RecordController.swift */,
 				31AEDBB9283E36E3003904D9 /* Chevre.mp3 */,
 				F63A706A27FB2BA300322235 /* cow.mp3 */,
 				31608CD827F4709D00F4039D /* AppDelegate.swift */,
@@ -165,7 +168,7 @@
 			files = (
 				31608CDD27F4709D00F4039D /* ViewController.swift in Sources */,
 				31608CD927F4709D00F4039D /* AppDelegate.swift in Sources */,
-				F699692E283E359800DC6D86 /* RecordController.swift in Sources */,
+				31486C7D284770DB002D593F /* RecordController.swift in Sources */,
 				31D4E1FC27FB2C4300760B17 /* BoxViewController.swift in Sources */,
 				3103D5F727FDA45500DA1655 /* Box.swift in Sources */,
 				31608CDB27F4709D00F4039D /* SceneDelegate.swift in Sources */,
