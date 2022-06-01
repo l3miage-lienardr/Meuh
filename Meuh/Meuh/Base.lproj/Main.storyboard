@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tp5-Dj-dDU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tp5-Dj-dDU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -72,6 +72,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Enregistrer"/>
+                                <connections>
+                                    <segue destination="a21-bU-0hO" kind="push" id="h2E-51-LzV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -88,6 +91,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Wot-3b-hbC"/>
                     <connections>
+                        <outlet property="button" destination="FbJ-46-zFR" id="hv9-SM-VgV"/>
                         <outlet property="listTableView" destination="3Kt-Hu-gjU" id="lb8-8K-aTc"/>
                     </connections>
                 </viewController>
@@ -135,6 +139,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbm-TO-las" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1434.7826086956522" y="83.705357142857139"/>
+        </scene>
+        <!--Record Controller-->
+        <scene sceneID="Uij-x9-5t8">
+            <objects>
+                <viewController id="a21-bU-0hO" customClass="RecordController" customModule="Meuh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OIq-3A-gOj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2J1-SQ-GUd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6p-pz-RHD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="414" id="bgz-bG-rs0"/>
+                                            <constraint firstAttribute="height" constant="50" id="y6a-Ro-92n"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsZ-WL-w3r">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="693"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Record"/>
+                                        <connections>
+                                            <action selector="start_recording:" destination="a21-bU-0hO" eventType="touchUpInside" id="tsj-th-AmE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trc-uZ-adf">
+                                        <rect key="frame" x="0.0" y="743" width="414" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Play"/>
+                                        <connections>
+                                            <action selector="play_recording:" destination="a21-bU-0hO" eventType="touchUpInside" id="dRt-2F-f2j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6s7-rE-77r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6s7-rE-77r" firstAttribute="bottom" secondItem="2J1-SQ-GUd" secondAttribute="bottom" id="Qkd-U2-W4M"/>
+                            <constraint firstItem="2J1-SQ-GUd" firstAttribute="top" secondItem="6s7-rE-77r" secondAttribute="top" id="f1O-o1-a5q"/>
+                            <constraint firstItem="6s7-rE-77r" firstAttribute="trailing" secondItem="2J1-SQ-GUd" secondAttribute="trailing" id="f4l-hP-aFK"/>
+                            <constraint firstItem="2J1-SQ-GUd" firstAttribute="leading" secondItem="6s7-rE-77r" secondAttribute="leading" id="h96-ax-APh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ajN-KK-sF7"/>
+                    <connections>
+                        <outlet property="play_btn_ref" destination="Trc-uZ-adf" id="gs3-Fj-v36"/>
+                        <outlet property="record_btn_ref" destination="AsZ-WL-w3r" id="zsx-He-FfY"/>
+                        <outlet property="recordingTimeLabel" destination="y6p-pz-RHD" id="KSD-N3-FgZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5n-Ub-0ir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735" y="796"/>
         </scene>
     </scenes>
     <resources>

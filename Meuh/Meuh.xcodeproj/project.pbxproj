@@ -165,6 +165,7 @@
 			files = (
 				31608CDD27F4709D00F4039D /* ViewController.swift in Sources */,
 				31608CD927F4709D00F4039D /* AppDelegate.swift in Sources */,
+				F699692E283E359800DC6D86 /* RecordController.swift in Sources */,
 				31D4E1FC27FB2C4300760B17 /* BoxViewController.swift in Sources */,
 				3103D5F727FDA45500DA1655 /* Box.swift in Sources */,
 				31608CDB27F4709D00F4039D /* SceneDelegate.swift in Sources */,
