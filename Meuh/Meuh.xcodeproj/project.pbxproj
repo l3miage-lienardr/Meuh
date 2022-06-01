@@ -15,8 +15,11 @@
 		31608CE027F4709D00F4039D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31608CDE27F4709D00F4039D /* Main.storyboard */; };
 		31608CE227F4709E00F4039D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31608CE127F4709E00F4039D /* Assets.xcassets */; };
 		31608CE527F4709E00F4039D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31608CE327F4709E00F4039D /* LaunchScreen.storyboard */; };
-		F63A706B27FB2BA300322235 /* cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F63A706A27FB2BA300322235 /* cow.mp3 */; };
+		31AEDBBA283E36E3003904D9 /* Chevre.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31AEDBB9283E36E3003904D9 /* Chevre.mp3 */; };
+		31AEDBBE283E409A003904D9 /* cochon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31AEDBBD283E409A003904D9 /* cochon.mp3 */; };
+		31AEDBC0283E420A003904D9 /* canard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31AEDBBF283E420A003904D9 /* canard.mp3 */; };
 		31D4E1FC27FB2C4300760B17 /* BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D4E1FB27FB2C4300760B17 /* BoxViewController.swift */; };
+		F63A706B27FB2BA300322235 /* cow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F63A706A27FB2BA300322235 /* cow.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +33,11 @@
 		31608CE127F4709E00F4039D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31608CE427F4709E00F4039D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31608CE627F4709E00F4039D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F63A706A27FB2BA300322235 /* cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cow.mp3; sourceTree = "<group>"; };
+		31AEDBB9283E36E3003904D9 /* Chevre.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Chevre.mp3; path = ../../../Downloads/Chevre.mp3; sourceTree = "<group>"; };
+		31AEDBBD283E409A003904D9 /* cochon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cochon.mp3; sourceTree = "<group>"; };
+		31AEDBBF283E420A003904D9 /* canard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = canard.mp3; sourceTree = "<group>"; };
 		31D4E1FB27FB2C4300760B17 /* BoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxViewController.swift; sourceTree = "<group>"; };
+		F63A706A27FB2BA300322235 /* cow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cow.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		31608CD727F4709D00F4039D /* Meuh */ = {
 			isa = PBXGroup;
 			children = (
+				31AEDBB9283E36E3003904D9 /* Chevre.mp3 */,
 				F63A706A27FB2BA300322235 /* cow.mp3 */,
 				31608CD827F4709D00F4039D /* AppDelegate.swift */,
 				31608CDA27F4709D00F4039D /* SceneDelegate.swift */,
@@ -75,6 +82,8 @@
 				31608CE327F4709E00F4039D /* LaunchScreen.storyboard */,
 				31608CE627F4709E00F4039D /* Info.plist */,
 				3103D5F627FDA45500DA1655 /* Box.swift */,
+				31AEDBBD283E409A003904D9 /* cochon.mp3 */,
+				31AEDBBF283E420A003904D9 /* canard.mp3 */,
 			);
 			path = Meuh;
 			sourceTree = "<group>";
@@ -139,8 +148,11 @@
 			files = (
 				31608CE527F4709E00F4039D /* LaunchScreen.storyboard in Resources */,
 				31608CE227F4709E00F4039D /* Assets.xcassets in Resources */,
+				31AEDBBE283E409A003904D9 /* cochon.mp3 in Resources */,
 				F63A706B27FB2BA300322235 /* cow.mp3 in Resources */,
 				31608CE027F4709D00F4039D /* Main.storyboard in Resources */,
+				31AEDBBA283E36E3003904D9 /* Chevre.mp3 in Resources */,
+				31AEDBC0283E420A003904D9 /* canard.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

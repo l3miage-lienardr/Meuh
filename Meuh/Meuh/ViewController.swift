@@ -36,10 +36,16 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         check_record_permission()
         
         let box = Box(title: "Meuh", imageName: "boite-a-meuh-publicitaire", sound: "cow")
-        let box2 = Box(title: "Corentin", imageName: "Corentin", sound:"cow")
-        let box3 = Box(title: "Nicolas", imageName: "Nicolas", sound:"cow")
+        let box1 = Box(title: "Chevre", imageName: "chevre", sound:"Chevre")
+        let box4 = Box(title: "Cochon", imageName: "cochon", sound:"cochon")
+        let box5 = Box(title: "Canard", imageName: "canard", sound:"canard")
+        let box2 = Box(title: "Corentin", imageName: "Corentin", sound:"Chevre")
+        let box3 = Box(title: "Nicolas", imageName: "Nicolas", sound:"canard")
         
         boxes.append(box)
+        boxes.append(box1)
+        boxes.append(box4)
+        boxes.append(box5)
         boxes.append(box2)
         boxes.append(box3)
         
