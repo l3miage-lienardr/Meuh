@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tp5-Dj-dDU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tp5-Dj-dDU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -38,14 +38,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" id="FlQ-5p-dia" customClass="BoxCell" customModule="Meuh" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="42"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="42.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FlQ-5p-dia" id="9ei-KZ-foi">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k04-7a-OG9">
-                                                    <rect key="frame" x="186" y="10.5" width="42" height="21"/>
+                                                    <rect key="frame" x="186" y="10.5" width="42" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -148,20 +148,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2J1-SQ-GUd">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trc-uZ-adf">
-                                <rect key="frame" x="0.0" y="670" width="414" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Zod-TD-r4P"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Play"/>
-                                <connections>
-                                    <action selector="play_recording:" destination="a21-bU-0hO" eventType="touchUpInside" id="dRt-2F-f2j"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6p-pz-RHD">
                                 <rect key="frame" x="0.0" y="79.5" width="414" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -179,23 +165,39 @@
                                     <action selector="start_recording:" destination="a21-bU-0hO" eventType="touchUpInside" id="tsj-th-AmE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Trc-uZ-adf">
+                                <rect key="frame" x="0.0" y="670" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zod-TD-r4P"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Play"/>
+                                <connections>
+                                    <action selector="play_recording:" destination="a21-bU-0hO" eventType="touchUpInside" id="dRt-2F-f2j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sex-bW-iif">
+                                <rect key="frame" x="0.0" y="740" width="414" height="48"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Sauvegarder"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6s7-rE-77r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Trc-uZ-adf" firstAttribute="top" secondItem="AsZ-WL-w3r" secondAttribute="bottom" constant="20" id="0V2-o3-TtY"/>
+                            <constraint firstItem="sex-bW-iif" firstAttribute="trailing" secondItem="Trc-uZ-adf" secondAttribute="trailing" id="3BR-02-fZf"/>
                             <constraint firstItem="AsZ-WL-w3r" firstAttribute="leading" secondItem="6s7-rE-77r" secondAttribute="leading" constant="1" id="4h6-9r-h5V"/>
                             <constraint firstItem="y6p-pz-RHD" firstAttribute="top" secondItem="OIq-3A-gOj" secondAttribute="topMargin" constant="-8.5" id="7bD-kM-jR7"/>
-                            <constraint firstItem="Trc-uZ-adf" firstAttribute="trailing" secondItem="2J1-SQ-GUd" secondAttribute="trailing" id="FTF-KC-8kM"/>
+                            <constraint firstItem="sex-bW-iif" firstAttribute="top" secondItem="Trc-uZ-adf" secondAttribute="bottom" constant="20" id="IVv-dX-BVA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AsZ-WL-w3r" secondAttribute="trailing" constant="-21" id="M5j-6t-9rc"/>
                             <constraint firstItem="6s7-rE-77r" firstAttribute="bottom" secondItem="Trc-uZ-adf" secondAttribute="bottom" constant="142" id="YM7-sn-KRQ"/>
+                            <constraint firstItem="sex-bW-iif" firstAttribute="leading" secondItem="Trc-uZ-adf" secondAttribute="leading" id="aTl-C0-5I7"/>
                             <constraint firstItem="Trc-uZ-adf" firstAttribute="trailing" secondItem="y6p-pz-RHD" secondAttribute="trailing" id="bZw-7P-ZEz"/>
-                            <constraint firstItem="2J1-SQ-GUd" firstAttribute="bottom" secondItem="6s7-rE-77r" secondAttribute="bottom" id="fVv-7y-3Z8"/>
-                            <constraint firstItem="2J1-SQ-GUd" firstAttribute="top" secondItem="6s7-rE-77r" secondAttribute="top" id="fX6-gm-aOo"/>
+                            <constraint firstItem="6s7-rE-77r" firstAttribute="bottom" secondItem="sex-bW-iif" secondAttribute="bottom" constant="74" id="g7Q-9A-EJz"/>
                             <constraint firstItem="Trc-uZ-adf" firstAttribute="leading" secondItem="y6p-pz-RHD" secondAttribute="leading" id="gQU-KL-7gZ"/>
                             <constraint firstItem="Trc-uZ-adf" firstAttribute="leading" secondItem="OIq-3A-gOj" secondAttribute="leading" id="gnX-9x-TQy"/>
                             <constraint firstAttribute="trailing" secondItem="Trc-uZ-adf" secondAttribute="trailing" id="n64-BE-45X"/>
-                            <constraint firstItem="Trc-uZ-adf" firstAttribute="leading" secondItem="2J1-SQ-GUd" secondAttribute="leading" id="tJ8-52-5gn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ajN-KK-sF7"/>
@@ -203,11 +205,12 @@
                         <outlet property="play_btn_ref" destination="Trc-uZ-adf" id="gs3-Fj-v36"/>
                         <outlet property="record_btn_ref" destination="AsZ-WL-w3r" id="zsx-He-FfY"/>
                         <outlet property="recordingTimeLabel" destination="y6p-pz-RHD" id="KSD-N3-FgZ"/>
+                        <outlet property="saveButtonOutlet" destination="sex-bW-iif" id="yFR-sJ-Erk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v5n-Ub-0ir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="796"/>
+            <point key="canvasLocation" x="734.78260869565224" y="795.53571428571422"/>
         </scene>
     </scenes>
     <resources>
