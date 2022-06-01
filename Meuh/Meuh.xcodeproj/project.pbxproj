@@ -35,7 +35,7 @@
 		31608CE127F4709E00F4039D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31608CE427F4709E00F4039D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31608CE627F4709E00F4039D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31AEDBB9283E36E3003904D9 /* Chevre.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Chevre.mp3; path = ../../../Downloads/Chevre.mp3; sourceTree = "<group>"; };
+		31AEDBB9283E36E3003904D9 /* Chevre.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chevre.mp3; sourceTree = "<group>"; };
 		31AEDBBD283E409A003904D9 /* cochon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cochon.mp3; sourceTree = "<group>"; };
 		31AEDBBF283E420A003904D9 /* canard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = canard.mp3; sourceTree = "<group>"; };
 		31D4E1FB27FB2C4300760B17 /* BoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxViewController.swift; sourceTree = "<group>"; };
