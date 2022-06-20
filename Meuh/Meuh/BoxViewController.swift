@@ -18,11 +18,16 @@ class BoxViewController: UIViewController,AVAudioRecorderDelegate, AVAudioPlayer
     var audioPlayer : AVAudioPlayer!
     var currentDeviceOrientation: UIDeviceOrientation = .unknown
     
+    let screenSize = UIScreen.main.bounds
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let imageToLoad = selectedImage {
             imageView.image  = imageToLoad
+            
+            imageView.frame = CGRect(x: 10, y: 10, width: screenSize.width - 10, height: screenSize.height - 50)
         }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -55,44 +60,41 @@ class BoxViewController: UIViewController,AVAudioRecorderDelegate, AVAudioPlayer
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-//        view.frame = view.bounds
-//
-//        let screen = UIScreen.main.fixedCoordinateSpace
-//
-//        //These values will give a rect half the size of the screen and centered.
-//        let width = screen.bounds.width / 2
-//        let height = screen.bounds.height / 2
-//        let x = (screen.bounds.width - width) / 2
-//        let y = (screen.bounds.height - height) / 2
-//        let absoluteRect = CGRect(x: x, y: y, width: width, height: height)
-//
-//        let stampRect = screen.convert(absoluteRect, to: view)
-//        imageView.frame = stampRect
+        view.frame = view.bounds
 
-        //Change the orientation of the image
-//        switch UIDevice.current.orientation {
-//        case .landscapeLeft:
-////            imageView.image = UIImage(cgImage: selectedImage!.cgImage!, scale: selectedImage!.scale, orientation: .left)
-//            imageView.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2)
-////            imageView.transform = CGAffineTransform(rotationAngle: -3 * CGFloat.pi/2)
-//            break
-//        case .landscapeRight:
-//            imageView.transform = CGAffineTransform(rotationAngle: -CGFloat.pi/2)
-////            imageView.image = UIImage(cgImage: selectedImage!.cgImage!, scale: selectedImage!.scale, orientation: .right)
-//            break
-//        case .portraitUpsideDown:
-//            imageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-//        default:
-//            imageView.transform = CGAffineTransform(rotationAngle: 0)
-//        }
-//        imageView.image!.fixImageOrientation()
+        let screen = UIScreen.main.fixedCoordinateSpace
+
+        //These values will give a rect half the size of the screen and centered.
+        let width = screen.bounds.width / 2
+        let height = screen.bounds.height / 2
+        let x = (screen.bounds.width - width) / 2
+        let y = (screen.bounds.height - height) / 2
+        let absoluteRect = CGRect(x: x, y: y, width: width, height: height)
+
+        let stampRect = screen.convert(absoluteRect, to: view)
+        imageView.frame = stampRect
     }
+    
     
     @objc func deviceDidRotate(notification: NSNotification) {
         self.currentDeviceOrientation = UIDevice.current.orientation
         print(UIDevice.current.orientation.rawValue)
         playSound(sound: selectedSound, type: "mp3")
         // Do what you want here
+        //        change the orientation of the image
+                switch UIDevice.current.orientation {
+                case .landscapeLeft:
+                    imageView.transform = CGAffineTransform(rotationAngle: 3*CGFloat.pi/2)
+                    break
+                case .landscapeRight:
+                    imageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2)
+                    break
+                case .portraitUpsideDown:
+                    imageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi/2)
+                default:
+                    imageView.transform = CGAffineTransform(rotationAngle: 0)
+                }
+
     }
     
     func playSound(sound :String, type : String) {
@@ -131,13 +133,13 @@ extension UIImage {
         //check current orientation of original image
         switch self.imageOrientation {
         case .down, .downMirrored:
-            transform = transform.rotated(by: CGFloat(M_PI));
+            transform = transform.rotated(by: CGFloat(Double.pi));
             
         case .left, .leftMirrored:
-            transform = transform.rotated(by: CGFloat(M_PI_2));
+            transform = transform.rotated(by: CGFloat(Double.pi/2));
             isRotatedBy90 = true
         case .right, .rightMirrored:
-            transform = transform.rotated(by: CGFloat(-M_PI_2));
+            transform = transform.rotated(by: CGFloat(Double.pi/2));
             isRotatedBy90 = true
         case .up, .upMirrored:
             break

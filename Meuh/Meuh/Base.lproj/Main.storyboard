@@ -38,14 +38,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" id="FlQ-5p-dia" customClass="BoxCell" customModule="Meuh" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="42"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="42.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FlQ-5p-dia" id="9ei-KZ-foi">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k04-7a-OG9">
-                                                    <rect key="frame" x="186" y="10.5" width="42" height="21"/>
+                                                    <rect key="frame" x="186" y="10.5" width="42" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -107,30 +107,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSN-vs-Nof">
-                                <rect key="frame" x="5" y="144" width="404" height="618"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h1v-Kt-rMT">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="618"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="h1v-Kt-rMT" firstAttribute="top" secondItem="eSN-vs-Nof" secondAttribute="top" id="4vC-hA-2lx"/>
-                                    <constraint firstItem="h1v-Kt-rMT" firstAttribute="leading" secondItem="eSN-vs-Nof" secondAttribute="leading" id="E3P-CH-ULh"/>
-                                    <constraint firstAttribute="trailing" secondItem="h1v-Kt-rMT" secondAttribute="trailing" id="OVJ-6p-Hlv"/>
-                                    <constraint firstAttribute="bottom" secondItem="h1v-Kt-rMT" secondAttribute="bottom" id="egz-Qx-de6"/>
-                                </constraints>
-                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1v-Kt-rMT">
+                                <rect key="frame" x="5" y="139" width="404" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pcA-7S-95P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eSN-vs-Nof" firstAttribute="top" secondItem="pcA-7S-95P" secondAttribute="top" constant="100" id="7ed-uk-mVQ"/>
-                            <constraint firstItem="pcA-7S-95P" firstAttribute="trailing" secondItem="eSN-vs-Nof" secondAttribute="trailing" constant="5" id="87v-m7-T60"/>
-                            <constraint firstItem="pcA-7S-95P" firstAttribute="bottom" secondItem="eSN-vs-Nof" secondAttribute="bottom" constant="100" id="8Mg-79-RuY"/>
-                            <constraint firstItem="eSN-vs-Nof" firstAttribute="leading" secondItem="pcA-7S-95P" secondAttribute="leading" constant="5" id="MC6-lb-tLg"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="h1v-Kt-rMT" id="tB3-dQ-qfv"/>
