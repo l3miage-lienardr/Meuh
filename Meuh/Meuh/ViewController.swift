@@ -29,11 +29,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let box5 = Box(title: "Canard", imageName: "canard", sound:"canard")
         let box2 = Box(title: "Corentin", imageName: "Corentin", sound:"Chevre")
         let box3 = Box(title: "Nicolas", imageName: "Nicolas", sound:"canard")
+        let box6 = Box(title: "Chien", imageName: "chien", sound:"chien")
         
         boxes.append(box)
         boxes.append(box1)
         boxes.append(box4)
         boxes.append(box5)
+        boxes.append(box6)
         boxes.append(box2)
         boxes.append(box3)
         

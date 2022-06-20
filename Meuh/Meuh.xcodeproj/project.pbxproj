@@ -16,6 +16,7 @@
 		31608CE027F4709D00F4039D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31608CDE27F4709D00F4039D /* Main.storyboard */; };
 		31608CE227F4709E00F4039D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31608CE127F4709E00F4039D /* Assets.xcassets */; };
 		31608CE527F4709E00F4039D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31608CE327F4709E00F4039D /* LaunchScreen.storyboard */; };
+		31921E152860D6A80050E9D6 /* chien.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31921E142860D6A80050E9D6 /* chien.mp3 */; };
 		31AEDBBA283E36E3003904D9 /* Chevre.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31AEDBB9283E36E3003904D9 /* Chevre.mp3 */; };
 		31AEDBBE283E409A003904D9 /* cochon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31AEDBBD283E409A003904D9 /* cochon.mp3 */; };
 		31AEDBC0283E420A003904D9 /* canard.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31AEDBBF283E420A003904D9 /* canard.mp3 */; };
@@ -35,6 +36,7 @@
 		31608CE127F4709E00F4039D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31608CE427F4709E00F4039D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31608CE627F4709E00F4039D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31921E142860D6A80050E9D6 /* chien.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chien.mp3; sourceTree = "<group>"; };
 		31AEDBB9283E36E3003904D9 /* Chevre.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chevre.mp3; sourceTree = "<group>"; };
 		31AEDBBD283E409A003904D9 /* cochon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cochon.mp3; sourceTree = "<group>"; };
 		31AEDBBF283E420A003904D9 /* canard.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = canard.mp3; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				3103D5F627FDA45500DA1655 /* Box.swift */,
 				31AEDBBD283E409A003904D9 /* cochon.mp3 */,
 				31AEDBBF283E420A003904D9 /* canard.mp3 */,
+				31921E142860D6A80050E9D6 /* chien.mp3 */,
 			);
 			path = Meuh;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				F63A706B27FB2BA300322235 /* cow.mp3 in Resources */,
 				31608CE027F4709D00F4039D /* Main.storyboard in Resources */,
 				31AEDBBA283E36E3003904D9 /* Chevre.mp3 in Resources */,
+				31921E152860D6A80050E9D6 /* chien.mp3 in Resources */,
 				31AEDBC0283E420A003904D9 /* canard.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
