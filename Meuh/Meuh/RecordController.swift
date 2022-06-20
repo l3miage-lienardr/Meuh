@@ -4,7 +4,7 @@
 //
 //  Created by lienardr on 25/05/2022.
 //
-
+import CoreData
 import UIKit
 import AVFoundation
 var audioRecorder: AVAudioRecorder!
@@ -12,10 +12,16 @@ var audioPlayer : AVAudioPlayer!
 
 class RecordController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate  {
     
+    var soundsNoteID: String!        // populated from incoming seque
+    var soundsNoteTitle: String!     // populated from incoming seque
+    var soundURL: String!            // store in CoreData
     
     @IBOutlet var recordingTimeLabel: UILabel!
     @IBOutlet var record_btn_ref: UIButton!
     @IBOutlet var play_btn_ref: UIButton!
+    
+    @IBOutlet weak var soundTitleTextField: UITextField!
+    @IBOutlet weak var saveButtonOutlet: UIButton!
     
     var audioRecorder: AVAudioRecorder!
     var meterTimer:Timer!
@@ -26,7 +32,7 @@ class RecordController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayer
     override func viewDidLoad() {
         super.viewDidLoad()
         check_record_permission()
-
+        saveButtonOutlet.isEnabled = false
         // Do any additional setup after loading the view.
     }
     
