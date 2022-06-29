@@ -22,6 +22,7 @@ class BoxViewController: UIViewController,AVAudioRecorderDelegate, AVAudioPlayer
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Chargement de l'image de boit à meuh
         if let imageToLoad = selectedImage {
             imageView.image  = imageToLoad
             
@@ -30,22 +31,9 @@ class BoxViewController: UIViewController,AVAudioRecorderDelegate, AVAudioPlayer
         
         // Do any additional setup after loading the view.
     }
+
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        playSound(sound: selectedSound, type: "mp3")
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        NotificationCenter.default.removeObserver(self)
-        if UIDevice.current.isGeneratingDeviceOrientationNotifications {
-            UIDevice.current.endGeneratingDeviceOrientationNotifications()
-        }
-    }
-    
+    //A l'arrivée sur la vue, on génère des notifications d'orientation de l'appareil
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -57,6 +45,18 @@ class BoxViewController: UIViewController,AVAudioRecorderDelegate, AVAudioPlayer
         // Do what you want here
     }
     
+    
+    //Lorsque on quitte la vue, on enlève l'observer et la génération de notifications
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self)
+        if UIDevice.current.isGeneratingDeviceOrientationNotifications {
+            UIDevice.current.endGeneratingDeviceOrientationNotifications()
+        }
+    }
+    
+    //Calcul de la taille de l'écran pour redimensionner l'image selon le sens de rotation
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
@@ -75,13 +75,13 @@ class BoxViewController: UIViewController,AVAudioRecorderDelegate, AVAudioPlayer
         imageView.frame = stampRect
     }
     
-    
+    //Méthode appelée lorsqu'une notification de rotation d'écran est reçue
     @objc func deviceDidRotate(notification: NSNotification) {
         self.currentDeviceOrientation = UIDevice.current.orientation
         print(UIDevice.current.orientation.rawValue)
+        //Lancement du son
         playSound(sound: selectedSound, type: "mp3")
-        // Do what you want here
-        //        change the orientation of the image
+        // Rotation de l'image pour s'adapter au sens de l'écran
                 switch UIDevice.current.orientation {
                 case .landscapeLeft:
                     imageView.transform = CGAffineTransform(rotationAngle: 3*CGFloat.pi/2)
@@ -96,8 +96,9 @@ class BoxViewController: UIViewController,AVAudioRecorderDelegate, AVAudioPlayer
                 }
 
     }
-    
+    //Méthode de lancement du son
     func playSound(sound :String, type : String) {
+        //Récupération du chemin du fichier son
         if let path = Bundle.main.path(forResource: sound, ofType: type) {
             do {
                 player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
@@ -108,89 +109,5 @@ class BoxViewController: UIViewController,AVAudioRecorderDelegate, AVAudioPlayer
         }
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension UIImage {
-    
-    func fixImageOrientation() -> UIImage? {
-        var flip:Bool = false //used to see if the image is mirrored
-        var isRotatedBy90:Bool = false // used to check whether aspect ratio is to be changed or not
-        
-        var transform = CGAffineTransform.identity
-        
-        //check current orientation of original image
-        switch self.imageOrientation {
-        case .down, .downMirrored:
-            transform = transform.rotated(by: CGFloat(Double.pi));
-            
-        case .left, .leftMirrored:
-            transform = transform.rotated(by: CGFloat(Double.pi/2));
-            isRotatedBy90 = true
-        case .right, .rightMirrored:
-            transform = transform.rotated(by: CGFloat(Double.pi/2));
-            isRotatedBy90 = true
-        case .up, .upMirrored:
-            break
-        }
-        
-        switch self.imageOrientation {
-            
-        case .upMirrored, .downMirrored:
-            transform = transform.translatedBy(x: self.size.width, y: 0)
-            flip = true
-            
-        case .leftMirrored, .rightMirrored:
-            transform = transform.translatedBy(x: self.size.height, y: 0)
-            flip = true
-        default:
-            break;
-        }
-        
-        // calculate the size of the rotated view's containing box for our drawing space
-        let rotatedViewBox = UIView(frame: CGRect(origin: CGPoint(x:0, y:0), size: size))
-        rotatedViewBox.transform = transform
-        let rotatedSize = rotatedViewBox.frame.size
-        
-        // Create the bitmap context
-        UIGraphicsBeginImageContext(rotatedSize)
-        let bitmap = UIGraphicsGetCurrentContext()
-        
-        // Move the origin to the middle of the image so we will rotate and scale around the center.
-        bitmap!.translateBy(x: rotatedSize.width / 2.0, y: rotatedSize.height / 2.0);
-        
-        // Now, draw the rotated/scaled image into the context
-        var yFlip: CGFloat
-        
-        if(flip){
-            yFlip = CGFloat(-1.0)
-        } else {
-            yFlip = CGFloat(1.0)
-        }
-        
-        bitmap!.scaleBy(x: yFlip, y: -1.0)
-        
-        //check if we have to fix the aspect ratio
-        if isRotatedBy90 {
-            bitmap?.draw(self.cgImage!, in: CGRect(x: -size.width / 2, y: -size.height / 2, width: size.height,height: size.width))
-        } else {
-            bitmap?.draw(self.cgImage!, in: CGRect(x: -size.width / 2, y: -size.height / 2, width: size.width,height: size.height))
-        }
-        
-        let fixedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return fixedImage
-    }
-}

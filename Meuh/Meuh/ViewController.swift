@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Peuplement de la tableview avec les différentes boîtes à meuh
         let box = Box(title: "Meuh", imageName: "boite-a-meuh-publicitaire", sound: "cow")
         let box1 = Box(title: "Chevre", imageName: "chevre", sound:"Chevre")
         let box4 = Box(title: "Cochon", imageName: "cochon", sound:"cochon")
@@ -56,6 +57,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    //Sur clic d'une cellule de la table view, navigation vers un BoxViewController avec comme paramètre le nom sélectionné
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboad = UIStoryboard(name: "Main", bundle: nil)
         let nextViewController = storyboad.instantiateViewController(withIdentifier: "box") as! BoxViewController

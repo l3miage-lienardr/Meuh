@@ -190,11 +190,16 @@ class RecordController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayer
         //Sinon
         else
         {
+            //Récupération du chemin du fichier
             if FileManager.default.fileExists(atPath: getFileUrl().path)
             {
+                //Désactivation du bouton d'enregistrement
                 record_btn_ref.isEnabled = false
+                //Chagement du titre du bouton de "Play" à "Pause"
                 play_btn_ref.setTitle("Pause", for: .normal)
+                //Paramétrage du player
                 prepare_play()
+                //Lancement du son
                 audioPlayer.play()
                 isPlaying = true
             }
@@ -205,11 +210,12 @@ class RecordController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayer
         }
     }
     
-    //Méthode
+    //Méthode de paramétrage du player de son
     func prepare_play()
     {
         do
         {
+            //Récupération du fichier son à partir de son url
             audioPlayer = try AVAudioPlayer(contentsOf: getFileUrl())
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
