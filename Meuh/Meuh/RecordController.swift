@@ -214,4 +214,16 @@ class RecordController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayer
             }
         }
     }
+    /*
+    @IBAction func soundSaveButtonAction(_ sender: AnyObject) {
+        do {
+                let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                let documentDirectory = URL(fileURLWithPath: path)
+                
+                let destinationPath = documentDirectory.appendingPathComponent("\(newTitle).m4a")
+            try FileManager.default.createFile(atPath: destinationPath.absoluteString, contents: AVAudioRecorder., attributes: <#T##[FileAttributeKey : Any]?#>)
+            } catch {
+                print(error)
+            }
+        }*/
 }
